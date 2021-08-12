@@ -1,0 +1,114 @@
+:root{
+  --Moderate-violet: hsl(263, 55%, 52%);
+  --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --White: hsl(0, 0%, 100%);
+  --Light-gray: hsl(0, 0%, 81%);
+  --Light-grayish-blue: hsl(210, 46%, 95%);
+}
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  color: var(--White);
+  background-color: var(--Light-grayish-blue);
+  font-family: "Barlow Semi Condensed";
+  font-weight: 500;
+  padding: 50px 75px;
+  min-height: 100vh;
+}
+p{
+  font-size: 13px;
+}
+img{
+  border-radius: 100%;
+}
+h2{
+  font-weight: 600;
+  padding-bottom: 2rem;
+}
+.grid-container {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-areas:
+    'cardd1 cardd1 cardd1 cardd1 cardd1 cardd1 cardd2 cardd2 cardd5 cardd5'
+    'cardd3 cardd3 cardd4 cardd4 cardd4 cardd4 cardd4 cardd4 cardd5 cardd5';
+    margin-bottom: 2rem;
+}
+
+.grid-item {
+  padding: 30px;
+  border-radius: 8px;
+}
+
+.item1 {
+  grid-area: cardd1;
+  background-color: var(--Moderate-violet);
+  background-image: url("images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: 85% 15%;
+}
+
+.item2 {
+  grid-area: cardd2;
+  background-color: var(--Very-dark-grayish-blue);
+}
+.item5 {
+  grid-area: cardd5;
+  background-color: var(--White);
+  color: var(--Very-dark-grayish-blue);
+}
+.item3{
+  grid-area: cardd3;
+  background-color: var(--White);
+  color: var(--Very-dark-blackish-blue);
+}
+.item4{
+  grid-area: cardd4;
+  background-color: var(--Very-dark-blackish-blue);
+  color: var(--White);
+}
+.person{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.info{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 15px;
+}
+.qualification{
+  opacity: 0.5;
+}
+.about{
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.about p{
+  opacity: 0.7;
+}
+@media only screen and (max-width: 700px) {
+  body{
+    padding: 20px 15px;
+  }
+  .grid-container{
+    grid-template-areas:
+        'cardd1'
+        'cardd2'
+        'cardd3'
+        'cardd4'
+        'cardd5';
+  }
+}
